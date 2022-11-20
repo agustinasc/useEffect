@@ -1,13 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  VStack,
-  Button,
-  Heading,
-  HStack,
-  Text,
-  Icon,
-  background,
-} from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 
 export const Reloj = () => {
   const [hora, setHora] = useState(new Date().toLocaleTimeString());

@@ -1,16 +1,10 @@
 import { useState, useEffect } from "react";
-import {
-  VStack,
-  Button,
-  Heading,
-  HStack,
-  Text,
-  Icon,
-  background,
-} from "@chakra-ui/react";
+import { VStack, Button, Heading, HStack, Text } from "@chakra-ui/react";
 import { FaExchangeAlt } from "react-icons/fa";
 import "./App.css";
 import { Reloj } from "./Reloj.jsx";
+import { CountDown } from "./CountDown";
+import { PosicionCursor } from "./PosicionCursor";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -61,6 +55,9 @@ function App() {
 
       {show && <Reloj />}
       <Button onClick={toggle}>Toggle</Button>
+
+      <CountDown initialCount={10} />
+      <PosicionCursor />
     </VStack>
   );
 }
